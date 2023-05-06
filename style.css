@@ -1,0 +1,803 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0%;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: "Poppins";
+}
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(assets/img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+
+
+.cita__active{
+  width: 500px;
+  height: auto;
+  background-color: #404040;
+  padding: 20px;
+  position: fixed;
+  top: 10%;
+  border-radius: 15px 0px;
+  border: 2px solid #ccc;
+
+}
+
+.cita__no__active{
+ display: none;
+
+}
+.div{
+    display: flex;
+    justify-content: center;
+}
+.contact-form-active {
+    background-color: #50505000;
+    width: 100%;
+    height: auto;
+    padding: 10px 20px 20px 20px;
+    border-radius: 10px;
+    
+  }
+  
+  .contact-form-active label {
+    color: white;
+  }
+  
+  .contact-form-active .heading {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 12px;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .contact-form-active form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form-active label {
+    margin-bottom: 10px;
+  }
+  
+  #message {
+    resize: none;
+    height: 200px;
+    width: 100%;
+    font-family: "Poppins";
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .contact-form-active input, .contact-form-active textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+  }
+  
+  .contact-form-active input:focus, .contact-form-active textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #505050;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+  .contact-form-active h1{
+    text-align: center;
+    margin: 10px;
+    color: white;
+  }
+  
+  .contact-form-active button[type="submit"] {
+    background-color: #505050;
+    color: #fff;
+    font-family: "Poppins";
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px 0px;
+  }
+  
+  .contact-form-active button[type="submit"]:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+ 
+  }
+  .mobile__nav {
+    position: relative;
+    
+    display: none;
+  }
+  
+  .btn__menu {
+    display: flex;
+    justify-content: start;
+    margin-top: 20px;
+    margin-left: 20px;
+    
+  }
+  .btn__menu button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .btn__menu img{
+    width: 32px;
+    height: auto;
+  }
+  
+  #links {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    background-color: #505050;
+    list-style: none;
+    margin-top: 10px;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 1s ease;
+  }
+  
+  
+  #links.open {
+  right: -20px;
+  left: 0px;
+  transition: all 1s ease;
+
+  }
+  
+  #links li {
+    margin: 10px;
+  }
+  
+  #links a {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    margin: 10px auto;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  #links a:hover {
+    color: rgb(172, 172, 172);
+  }
+  
+@media screen and (max-width: 1000px) {
+  .mobile__nav{
+    display: flex;
+
+  }
+  .links__izquierdos{
+    display: none;
+  }
+}
+
+
+  .links__izquierdos li{
+    list-style: none;
+    display:table-cell;
+  }
+  .links__izquierdos li a{
+    text-decoration: none;
+    color: white;
+    margin: 25px;
+    transition: 500ms ease;
+    float: left;
+  }
+  .links__izquierdos a:hover{
+    transition: 500ms ease;
+    color: rgb(196, 196, 196);
+  }
+  nav{
+    background-color: #50505095;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    transition: 1.5s ease;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.755);
+  }
+  .nav__scroll{
+    background-color: #505050;
+    transition: 1.5s ease;
+  }
+  .btn__cita{
+    float: right;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+  }
+  .btn__cita button{
+    width: 180px;
+    background-color: #40404085;
+    height: 35px;
+    border-radius: 0px 10px;
+    border: 2px solid rgb(91, 91, 91);
+    font-size: 15px;
+    letter-spacing: .5px;
+    font-family: "Poppins";
+    font-weight: 500;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    transition: 500ms;
+  }
+  .btn__cita button:hover{
+    border: 2px solid #505050;
+    transition: 500ms ease;
+  }
+  .btn__cita a{
+    text-decoration: none;
+  }
+  #inicio img{
+    width:400px;
+    height:400px;
+    display: flex;
+    margin: auto;  
+    padding-top: 20px;
+  }
+  #inicio h1,span,button{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    color: white;
+  
+  }
+  #inicio h1{
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+  #inicio span{
+    font-weight: 500;
+  }
+  #inicio button{
+    background-color: #505050b6;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    width: 200px;
+    height: 35px;
+    align-items: center;
+    margin: 20px auto;
+    border-radius: 0px 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 500ms;
+    font-family: "Poppins";
+  }
+  #inicio button:hover{
+    border: 2px solid rgb(154, 154, 154);
+    transition: 500ms ease;
+  }
+  .historia__contenedor{
+    width: 100%;
+    height: 520px;
+    padding: 10px;
+    background-color: #404040;
+  }
+  .historia__texto{
+    float: left;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+  }
+  .historia__texto h1{
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    margin: 15px;
+    font-weight: 800;
+  }
+  .historia__texto p{
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+  }
+  .historia__img{
+    font-size: 24px;
+    color: #fff;
+    height: 500px;
+    width: 50%;
+    float: right;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-left: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  #equipo{
+    background-color: #fff;
+    padding: 20px;
+  }
+  .titulo__equipo h1{
+    text-align: center;
+    font-size: 38px;
+  }
+  .equipo__contenedor{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: space-around;
+    margin: 40px 0px;
+  }
+
+  .imagen__barbero{
+    width: 300px;
+    height: 400px;
+    background-color: #404040;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+  }
+  .barber h3{
+    text-align: center;
+    margin: 10px auto;
+  }
+  .barber span{
+    color: #000;
+    margin: auto; 
+  }
+  #servicios{
+    max-width: 100%;
+    height: auto;
+    padding: 20px 0px 20px 0px;
+    background-color: #404040;
+    color: #fff;
+  }
+  .servicios__contenedor h1{
+    text-align: center;
+    font-weight: 800;
+    font-size: 38px;
+    margin-bottom: 0px;
+  }
+  .servicios{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    width: 100%;
+  }
+  .corte{
+    display: block;
+    margin: 50px auto;
+  }
+  .corte img{
+    width: 100px;
+    height: auto;
+    display: flex;
+    margin: auto;
+  }
+  .corte h3{
+    text-align: center;
+    margin: 10px auto;
+  }
+  .corte button{
+    width: 140px;
+    height: 32px;
+    cursor: pointer;
+    border-radius: 0px 15px;
+    font-family: "Poppins";
+    font-size: 16px;
+    align-items: center;
+    background-color: #505050;
+    border: 2px solid #131313;
+  }
+  .ubicacion__contenedor h1{
+    font-size: 38px;
+    text-align: center;
+    padding: 10px;
+  }
+  .ubicacion__contenedor{
+    padding: 10px 0px;
+  }
+
+
+  #cita{
+    max-width: 100%;
+    height: 630px;
+    padding: 20px;
+    width: 100%;
+    background-color: #404040;
+  }
+  .cita__contenedor{
+    width: 50%;
+    float: left;
+  }
+  .cita__contenedor h1{
+    color: white;
+    font-size: 42px;
+    text-align: center;
+  }
+  .cita__contenedor img{
+    display: flex;
+    margin: auto;
+  }
+  .contact-form {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    float: right;
+    height: 100%;
+  }
+  
+  .contact-form label {
+    color: black;
+  }
+  
+  .contact-form .heading {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 12px;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form label {
+    margin-bottom: 10px;
+    color: white;
+    font-family: "Poppins";
+    font-size: 18px;
+  }
+  
+ 
+  #message__down{
+    height:320px;
+  }
+  .contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    height: 50px;
+    font-family: "Poppins";
+    font-size: 16px;
+  }
+  
+  .contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #404040;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .contact-form button[type="submit"] {
+    background-color: #505050;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 90%;
+    font-family: "Poppins";
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .contact-form button[type="submit"]:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  footer{
+    background-color: #303030;
+    text-align: center;
+    padding: 15px;
+  }
+  footer span{
+    width: 80%;
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 950px) {
+    .barber:first-child{
+      display:none;
+    }
+    .historia__img{
+      height: 400px;
+    }
+    .historia__contenedor{
+      height: 420px;
+    }
+    .historia__texto h1{
+
+      margin: 10px;
+
+    }
+    .historia__texto p{
+      font-size: 16px;
+      padding: 5px;
+      font-weight: lighter;
+    }
+  }
+  @media  screen and (max-width:900px) {
+    .cita__active{
+      width: 400px;
+      height: auto;
+      padding: 5px 15px;
+      top: 15%;
+    }
+    .contact-form-active input, .contact-form-active textarea{
+      height: 40px;
+      font-size: 14px;
+    }
+    .contact-form-active button[type="submit"]{
+      margin: 10px 0px;
+    }
+    #message{
+      height: 150px;
+      font-size: 14px;
+    }
+    .contact-form-active{
+      padding: 5px;
+    }
+    .contact-form-active h1{
+      margin: 5px;
+    }
+    .historia__img{
+      display: none;
+    }
+    .historia__texto{
+      width: 100%;
+      display: block;
+      margin: auto;
+      justify-content: center;
+      padding: 15px;
+    }
+    .historia__contenedor{
+      height: 350px;
+      padding-bottom: 20px;
+      height: 400px;
+    }
+    .cita__contenedor img{
+      display: none;
+    }
+    .contact-form{
+      width: 100%;
+      height: auto;
+    }
+    #message__down{
+      height: 200px;
+    }
+    .cita__contenedor {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width:720px){
+    #inicio img{
+      width: 350px;
+      height: auto;
+    }
+    #inicio h1{
+      font-size: 38px;
+    }
+    #inicio span{
+      font-size: 15px;
+    }
+    .equipo__contenedor{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      justify-content: center;
+      margin: 40px 0px;
+    }
+    .imagen__barbero{
+      width: 500px;
+      height: 400px;
+      background-color: #404040;
+      display: flex;
+      align-items: center;
+      margin: auto;
+      color: white;
+      font-size: 20px;
+      justify-content: center;
+      text-align: center;
+    }
+    .barber h3{
+      text-align: center;
+      margin: 10px auto;
+    }
+    .barber span{
+      color: #000;
+      margin: auto; 
+    }
+    .servicios{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      width: 100%;
+    }
+    .corte{
+      display: block;
+      margin: 50px auto;
+    }
+    .corte img{
+      width: 80px;
+      height: auto;
+      display: flex;
+      margin: auto;
+    }
+    .corte h3{
+      text-align: center;
+      margin: 10px auto;
+    }
+    .corte button{
+      width: 140px;
+      height: 32px;
+      cursor: pointer;
+      border-radius: 0px 15px;
+      font-family: "Poppins";
+      font-size: 15px;
+      align-items: center;
+      background-color: #505050;
+      border: 2px solid #131313;
+    }
+    .ubicacion__contenedor iframe{
+      height: 400px;
+    }
+    .cita__contenedor h1{
+      font-size: 35px;
+    }
+    .contact-form input, .contact-form textarea {
+      height: 40px;
+  }
+  .contact-form{
+    padding: 10px;
+  }
+  #cita{
+    height: 550px;
+  }
+  footer span{
+    width: 95%;
+  }
+  .cita__active{
+    width: 90%;
+    top: 15%;
+  }
+  #message{
+    height: 120px;
+  }
+  .contact-form-active button[type="submit"] {
+    padding: 5px;
+    font-size: 14px;
+  }
+  .ubicacion__contenedor h1{
+    font-size: 30px;
+  }
+}
+@media screen and (max-width:550px) {
+  .barber:first-child{
+    display: block;
+  }
+  .historia__texto p{
+    font-size: 15px;
+  }
+  .titulo__equipo h1{
+    font-size: 32px;
+  }
+  .imagen__barbero{
+    width: 400px;
+  }
+  .contact-form label{
+    font-size: 16px;
+  }
+  #message__down{
+    font-size: 14px;
+    height: 170px;
+  }
+  #cita{
+    height: 500px;
+  }
+  .contact-form input, .contact-form textarea{
+    font-size: 14px;
+  }
+  footer span{
+    font-size: 15px;
+  }
+  #inicio h1{
+    font-size: 34px;
+  }
+  #inicio span{
+    font-size: 14px;
+  }
+  .ubicacion__contenedor h1{
+    font-size: 28px;
+  }
+  .corte img{
+    width: 70px;
+    height: auto;
+    display: flex;
+    margin: auto;
+  }
+  .corte h3{
+    text-align: center;
+    margin: 10px auto;
+  }
+  .corte button{
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 0px 15px;
+    font-family: "Poppins";
+    font-size: 15px;
+    align-items: center;
+    background-color: #505050;
+    border: 2px solid #131313;
+  }
+}
+@media screen and (max-width: 470px) {
+  #inicio h1{
+    font-size: 30px;
+  }
+  #inicio span{
+    font-size: 12px;
+  }
+  header{
+    height: 600px;
+  }
+  #inicio button{
+    font-size: 14px;
+  }
+  .historia__contenedor{
+    padding: 0;
+  }
+  .historia__texto p{
+    font-size: 14px;
+  }
+  .imagen__barbero{
+    width: 350px;
+  }
+  .corte img{
+    width: 70px;
+    height: auto;
+    display: flex;
+    margin: auto;
+  }
+  .corte h3{
+    text-align: center;
+    margin: 10px auto;
+    font-size: 16px;
+  }
+  .corte span{
+    font-size: 14px;
+  }
+  .corte button{
+    width: 130px;
+    height: 32px;
+    cursor: pointer;
+    border-radius: 0px 15px;
+    font-family: "Poppins";
+    font-size: 14px;
+    align-items: center;
+    background-color: #505050;
+    border: 2px solid #131313;
+  }
+}
